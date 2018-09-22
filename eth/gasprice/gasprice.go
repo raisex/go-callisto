@@ -29,7 +29,7 @@ import (
 	"github.com/EthereumCommonwealth/go-callisto/rpc"
 )
 
-var maxPrice = big.NewInt(6000 * params.Shannon)
+var maxPrice = big.NewInt(500 * params.GWei)
 
 type Config struct {
 	Blocks     int
