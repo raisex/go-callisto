@@ -25,10 +25,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
 
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
 )
 
 type Handler struct {

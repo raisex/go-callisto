@@ -3,7 +3,7 @@ package mru
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
 )
 
 func getTestID() *ID {

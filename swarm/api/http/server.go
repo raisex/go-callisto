@@ -36,12 +36,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/swarm/api"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	"github.com/ethereum/go-ethereum/swarm/storage/mru"
+	"github.com/EthereumCommonwealth/go-callisto/common"
+	"github.com/EthereumCommonwealth/go-callisto/metrics"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/api"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru"
 
 	"github.com/rs/cors"
 )

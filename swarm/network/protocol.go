@@ -24,13 +24,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/p2p"
-	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/p2p/protocols"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/swarm/log"
-	"github.com/ethereum/go-ethereum/swarm/state"
+	"github.com/EthereumCommonwealth/go-callisto/crypto"
+	"github.com/EthereumCommonwealth/go-callisto/p2p"
+	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
+	"github.com/EthereumCommonwealth/go-callisto/p2p/protocols"
+	"github.com/EthereumCommonwealth/go-callisto/rpc"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/state"
 )
 
 const (
@@ -38,6 +38,8 @@ const (
 	// ProtocolMaxMsgSize maximum allowed message size
 	ProtocolMaxMsgSize = 10 * 1024 * 1024
 	// timeout for waiting
+	NetworkId = 7919
+
 	bzzHandshakeTimeout = 3000 * time.Millisecond
 )
 

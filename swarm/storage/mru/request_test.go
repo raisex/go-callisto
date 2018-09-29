@@ -24,9 +24,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
+	"github.com/EthereumCommonwealth/go-callisto/crypto"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
 )
 
 func areEqualJSON(s1, s2 string) (bool, error) {

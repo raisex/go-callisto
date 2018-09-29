@@ -26,12 +26,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/EthereumCommonwealth/go-callisto/crypto"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/swarm/chunk"
-	"github.com/ethereum/go-ethereum/swarm/storage"
-	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
+	"github.com/EthereumCommonwealth/go-callisto/log"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/chunk"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
 )
 
 var (

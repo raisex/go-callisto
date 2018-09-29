@@ -16,7 +16,7 @@
 
 package mru
 
-import "github.com/ethereum/go-ethereum/common/hexutil"
+import "github.com/EthereumCommonwealth/go-callisto/common/hexutil"
 
 type binarySerializer interface {
 	binaryPut(serializedData []byte) error
