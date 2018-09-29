@@ -24,10 +24,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/p2p"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/protocols"
-	"github.com/EthereumCommonwealth/go-callisto/rlp"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
+	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/ethereum/go-ethereum/p2p/protocols"
+	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/ethereum/go-ethereum/swarm/log"
 )
 
 const (

@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	ch "github.com/EthereumCommonwealth/go-callisto/swarm/chunk"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mock/mem"
+	"github.com/ethereum/go-ethereum/common"
+	ch "github.com/ethereum/go-ethereum/swarm/chunk"
+	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/ethereum/go-ethereum/swarm/storage/mock/mem"
 
 	ldberrors "github.com/syndtr/goleveldb/leveldb/errors"
 )

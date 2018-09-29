@@ -28,14 +28,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/crypto"
-	"github.com/EthereumCommonwealth/go-callisto/log"
-	"github.com/EthereumCommonwealth/go-callisto/node"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations/adapters"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/api"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/network/simulation"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/node"
+	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
+	"github.com/ethereum/go-ethereum/swarm/api"
+	"github.com/ethereum/go-ethereum/swarm/network/simulation"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 	colorable "github.com/mattn/go-colorable"
 )
 

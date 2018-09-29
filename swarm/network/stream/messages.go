@@ -21,11 +21,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/metrics"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
-	bv "github.com/EthereumCommonwealth/go-callisto/swarm/network/bitvector"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/spancontext"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/ethereum/go-ethereum/swarm/log"
+	bv "github.com/ethereum/go-ethereum/swarm/network/bitvector"
+	"github.com/ethereum/go-ethereum/swarm/spancontext"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 	"github.com/opentracing/opentracing-go"
 )
 

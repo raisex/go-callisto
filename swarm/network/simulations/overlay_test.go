@@ -26,9 +26,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
+	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/ethereum/go-ethereum/p2p/simulations"
+	"github.com/ethereum/go-ethereum/swarm/log"
 )
 
 var (

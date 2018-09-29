@@ -23,9 +23,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/log"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/pot"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/swarm/pot"
 )
 
 func init() {

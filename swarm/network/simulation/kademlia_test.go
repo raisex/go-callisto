@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/node"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations/adapters"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/network"
+	"github.com/ethereum/go-ethereum/node"
+	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
+	"github.com/ethereum/go-ethereum/swarm/network"
 )
 
 func TestWaitTillHealthy(t *testing.T) {

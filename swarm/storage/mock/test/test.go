@@ -25,9 +25,9 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mock"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/ethereum/go-ethereum/swarm/storage/mock"
 )
 
 // MockStore creates NodeStore instances from provided GlobalStorer,

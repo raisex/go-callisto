@@ -23,14 +23,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/metrics"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/protocols"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
-	pq "github.com/EthereumCommonwealth/go-callisto/swarm/network/priorityqueue"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/network/stream/intervals"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/spancontext"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/state"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/ethereum/go-ethereum/p2p/protocols"
+	"github.com/ethereum/go-ethereum/swarm/log"
+	pq "github.com/ethereum/go-ethereum/swarm/network/priorityqueue"
+	"github.com/ethereum/go-ethereum/swarm/network/stream/intervals"
+	"github.com/ethereum/go-ethereum/swarm/spancontext"
+	"github.com/ethereum/go-ethereum/swarm/state"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 

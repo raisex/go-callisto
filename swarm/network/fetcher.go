@@ -21,9 +21,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/log"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 )
 
 var searchTimeout = 1 * time.Second

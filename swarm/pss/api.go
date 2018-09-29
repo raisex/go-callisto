@@ -21,11 +21,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/EthereumCommonwealth/go-callisto/common/hexutil"
-	"github.com/EthereumCommonwealth/go-callisto/crypto"
-	"github.com/EthereumCommonwealth/go-callisto/p2p"
-	"github.com/EthereumCommonwealth/go-callisto/rpc"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
+	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/ethereum/go-ethereum/swarm/log"
 )
 
 // Wrapper for receiving pss messages when using the pss API

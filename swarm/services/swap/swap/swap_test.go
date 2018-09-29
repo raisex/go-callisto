@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
+	"github.com/ethereum/go-ethereum/common"
 )
 
 type testInPayment struct {

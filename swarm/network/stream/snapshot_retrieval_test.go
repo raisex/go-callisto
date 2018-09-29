@@ -23,14 +23,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/node"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations/adapters"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/network"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/network/simulation"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/state"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/node"
+	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
+	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/ethereum/go-ethereum/swarm/network"
+	"github.com/ethereum/go-ethereum/swarm/network/simulation"
+	"github.com/ethereum/go-ethereum/swarm/state"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 )
 
 //constants for random file generation

@@ -27,11 +27,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 )
 
 const (

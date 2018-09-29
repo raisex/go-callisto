@@ -19,7 +19,7 @@ package simulation
 import (
 	"testing"
 
-	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
+	"github.com/ethereum/go-ethereum/p2p/enode"
 )
 
 func TestConnectToPivotNode(t *testing.T) {

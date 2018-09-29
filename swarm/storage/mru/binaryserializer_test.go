@@ -21,7 +21,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/EthereumCommonwealth/go-callisto/common/hexutil"
+	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 
 // KV mocks a key value store

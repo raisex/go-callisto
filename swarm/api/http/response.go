@@ -24,9 +24,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/log"
-	"github.com/EthereumCommonwealth/go-callisto/metrics"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/api"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/ethereum/go-ethereum/swarm/api"
 )
 
 var (

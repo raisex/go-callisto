@@ -21,10 +21,10 @@ import (
 	"hash"
 	"strconv"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 )
 
 // ID uniquely identifies an update on the network.

@@ -21,9 +21,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/encryption"
+	"github.com/ethereum/go-ethereum/swarm/storage/encryption"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
+	"github.com/ethereum/go-ethereum/common"
 )
 
 func TestHasherStore(t *testing.T) {

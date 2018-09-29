@@ -1,8 +1,8 @@
 package log
 
 import (
-	l "github.com/EthereumCommonwealth/go-callisto/log"
-	"github.com/EthereumCommonwealth/go-callisto/metrics"
+	l "github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/metrics"
 )
 
 const (

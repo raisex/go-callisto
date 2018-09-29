@@ -29,22 +29,22 @@ import (
 	"path"
 	"strings"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
 
 	"bytes"
 	"mime"
 	"path/filepath"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/contracts/ens"
-	"github.com/EthereumCommonwealth/go-callisto/core/types"
-	"github.com/EthereumCommonwealth/go-callisto/metrics"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/multihash"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/spancontext"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/contracts/ens"
+	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/ethereum/go-ethereum/swarm/multihash"
+	"github.com/ethereum/go-ethereum/swarm/spancontext"
+	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru"
 	opentracing "github.com/opentracing/opentracing-go"
 )
 

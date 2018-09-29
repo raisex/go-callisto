@@ -28,17 +28,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/node"
-	"github.com/EthereumCommonwealth/go-callisto/p2p"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations/adapters"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/network"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/network/simulation"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/state"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
-	mockdb "github.com/EthereumCommonwealth/go-callisto/swarm/storage/mock/db"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/node"
+	"github.com/ethereum/go-ethereum/p2p"
+	"github.com/ethereum/go-ethereum/p2p/enode"
+	"github.com/ethereum/go-ethereum/p2p/simulations/adapters"
+	"github.com/ethereum/go-ethereum/swarm/log"
+	"github.com/ethereum/go-ethereum/swarm/network"
+	"github.com/ethereum/go-ethereum/swarm/network/simulation"
+	"github.com/ethereum/go-ethereum/swarm/state"
+	"github.com/ethereum/go-ethereum/swarm/storage"
+	mockdb "github.com/ethereum/go-ethereum/swarm/storage/mock/db"
 )
 
 const dataChunkCount = 200

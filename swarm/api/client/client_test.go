@@ -25,15 +25,15 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/crypto"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/api"
-	swarmhttp "github.com/EthereumCommonwealth/go-callisto/swarm/api/http"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/multihash"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/testutil"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/swarm/api"
+	swarmhttp "github.com/ethereum/go-ethereum/swarm/api/http"
+	"github.com/ethereum/go-ethereum/swarm/multihash"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru"
+	"github.com/ethereum/go-ethereum/swarm/testutil"
 )
 
 func serverFunc(api *api.API) testutil.TestServer {

@@ -20,8 +20,8 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/EthereumCommonwealth/go-callisto/crypto/sha3"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/encryption"
+	"github.com/ethereum/go-ethereum/crypto/sha3"
+	"github.com/ethereum/go-ethereum/swarm/storage/encryption"
 )
 
 type RefEncryption struct {

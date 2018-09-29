@@ -37,18 +37,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru/lookup"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru/lookup"
 
-	"github.com/EthereumCommonwealth/go-callisto/common"
-	"github.com/EthereumCommonwealth/go-callisto/core/types"
-	"github.com/EthereumCommonwealth/go-callisto/crypto"
-	"github.com/EthereumCommonwealth/go-callisto/log"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/api"
-	swarm "github.com/EthereumCommonwealth/go-callisto/swarm/api/client"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/multihash"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage/mru"
-	"github.com/EthereumCommonwealth/go-callisto/swarm/testutil"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/swarm/api"
+	swarm "github.com/ethereum/go-ethereum/swarm/api/client"
+	"github.com/ethereum/go-ethereum/swarm/multihash"
+	"github.com/ethereum/go-ethereum/swarm/storage"
+	"github.com/ethereum/go-ethereum/swarm/storage/mru"
+	"github.com/ethereum/go-ethereum/swarm/testutil"
 )
 
 func init() {

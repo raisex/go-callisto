@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/log"
+	"github.com/ethereum/go-ethereum/swarm/log"
 )
 
 // SwAP Swarm Accounting Protocol with

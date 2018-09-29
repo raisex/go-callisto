@@ -20,7 +20,7 @@ import (
 	"context"
 	"path"
 
-	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
+	"github.com/ethereum/go-ethereum/swarm/storage"
 )
 
 type Response struct {
