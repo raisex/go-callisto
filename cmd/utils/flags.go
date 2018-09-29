@@ -51,8 +51,8 @@ import (
 	"github.com/EthereumCommonwealth/go-callisto/metrics/influxdb"
 	"github.com/EthereumCommonwealth/go-callisto/node"
 	"github.com/EthereumCommonwealth/go-callisto/p2p"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/discover"
 	"github.com/EthereumCommonwealth/go-callisto/p2p/discv5"
+	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
 	"github.com/EthereumCommonwealth/go-callisto/p2p/nat"
 	"github.com/EthereumCommonwealth/go-callisto/p2p/netutil"
 	"github.com/EthereumCommonwealth/go-callisto/params"
@@ -692,9 +692,9 @@ func setBootstrapNodes(ctx *cli.Context, cfg *p2p.Config) {
 		return // already set, don't apply defaults.
 	}
 
-	cfg.BootstrapNodes = make([]*discover.Node, 0, len(urls))
+	cfg.BootstrapNodes = make([]*enode.Node, 0, len(urls))
 	for _, url := range urls {
-		node, err := discover.ParseNode(url)
+		node, err := enode.ParseV4(url)
 		if err != nil {
 			log.Crit("Bootstrap URL invalid", "enode", url, "err", err)
 		}

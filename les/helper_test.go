@@ -38,7 +38,7 @@ import (
 	"github.com/EthereumCommonwealth/go-callisto/les/flowcontrol"
 	"github.com/EthereumCommonwealth/go-callisto/light"
 	"github.com/EthereumCommonwealth/go-callisto/p2p"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/discover"
+	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
 	"github.com/EthereumCommonwealth/go-callisto/params"
 )
 
@@ -221,7 +221,7 @@ func newTestPeer(t *testing.T, name string, version int, pm *ProtocolManager, sh
 	app, net := p2p.MsgPipe()
 
 	// Generate a random id and create the peer
-	var id discover.NodeID
+	var id enode.ID
 	rand.Read(id[:])
 
 	peer := pm.newPeer(version, NetworkId, p2p.NewPeer(id, name, nil), net)
@@ -258,7 +258,7 @@ func newTestPeerPair(name string, version int, pm, pm2 *ProtocolManager) (*peer,
 	app, net := p2p.MsgPipe()
 
 	// Generate a random id and create the peer
-	var id discover.NodeID
+	var id enode.ID
 	rand.Read(id[:])
 
 	peer := pm.newPeer(version, NetworkId, p2p.NewPeer(id, name, nil), net)

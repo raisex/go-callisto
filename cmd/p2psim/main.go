@@ -47,7 +47,7 @@ import (
 
 	"github.com/EthereumCommonwealth/go-callisto/crypto"
 	"github.com/EthereumCommonwealth/go-callisto/p2p"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/discover"
+	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
 	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations"
 	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations/adapters"
 	"github.com/EthereumCommonwealth/go-callisto/rpc"
@@ -285,7 +285,7 @@ func createNode(ctx *cli.Context) error {
 		if err != nil {
 			return err
 		}
-		config.ID = discover.PubkeyID(&privKey.PublicKey)
+		config.ID = enode.PubkeyToIDV4(&privKey.PublicKey)
 		config.PrivateKey = privKey
 	}
 	if services := ctx.String("services"); services != "" {

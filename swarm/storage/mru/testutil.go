@@ -22,8 +22,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/EthereumCommonwealth/go-callisto/p2p/discover"
-
+	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
 	"github.com/EthereumCommonwealth/go-callisto/swarm/storage"
 )
 
@@ -41,9 +40,9 @@ func (t *TestHandler) Close() {
 
 type mockNetFetcher struct{}
 
-func (m *mockNetFetcher) Request(ctx context.Context) {
+func (m *mockNetFetcher) Request(ctx context.Context, hopCount uint8) {
 }
-func (m *mockNetFetcher) Offer(ctx context.Context, source *discover.NodeID) {
+func (m *mockNetFetcher) Offer(ctx context.Context, source *enode.ID) {
 }
 
 func newFakeNetFetcher(context.Context, storage.Address, *sync.Map) storage.NetFetcher {

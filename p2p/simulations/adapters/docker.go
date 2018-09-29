@@ -28,8 +28,9 @@ import (
 	"strings"
 
 	"github.com/EthereumCommonwealth/go-callisto/node"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/discover"
 	"github.com/docker/docker/pkg/reexec"
+	"github.com/EthereumCommonwealth/go-callisto/node"
+	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
 )
 
 var (
@@ -64,7 +65,7 @@ func NewDockerAdapter() (*DockerAdapter, error) {
 
 	return &DockerAdapter{
 		ExecAdapter{
-			nodes: make(map[discover.NodeID]*ExecNode),
+			nodes: make(map[enode.ID]*ExecNode),
 		},
 	}, nil
 }

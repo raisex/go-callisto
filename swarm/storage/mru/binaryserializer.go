@@ -14,23 +14,31 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
-package enr
+package mru
 
-import (
-	"crypto/ecdsa"
-	"math/big"
-	"testing"
-)
+import "github.com/EthereumCommonwealth/go-callisto/common/hexutil"
 
-// Checks that failure to sign leaves the record unmodified.
-func TestSignError(t *testing.T) {
-	invalidKey := &ecdsa.PrivateKey{D: new(big.Int), PublicKey: *pubkey}
+type binarySerializer interface {
+	binaryPut(serializedData []byte) error
+	binaryLength() int
+	binaryGet(serializedData []byte) error
+}
 
-	var r Record
-	if err := SignV4(&r, invalidKey); err == nil {
-		t.Fatal("expected error from SignV4")
-	}
-	if len(r.pairs) > 0 {
-		t.Fatal("expected empty record, have", r.pairs)
-	}
+// Values interface represents a string key-value store
+// useful for building query strings
+type Values interface {
+	Get(key string) string
+	Set(key, value string)
+}
+
+type valueSerializer interface {
+	FromValues(values Values) error
+	AppendValues(values Values)
+}
+
+// Hex serializes the structure and converts it to a hex string
+func Hex(bin binarySerializer) string {
+	b := make([]byte, bin.binaryLength())
+	bin.binaryPut(b)
+	return hexutil.Encode(b)
 }

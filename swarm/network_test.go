@@ -31,7 +31,7 @@ import (
 	"github.com/EthereumCommonwealth/go-callisto/crypto"
 	"github.com/EthereumCommonwealth/go-callisto/log"
 	"github.com/EthereumCommonwealth/go-callisto/node"
-	"github.com/EthereumCommonwealth/go-callisto/p2p/discover"
+	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
 	"github.com/EthereumCommonwealth/go-callisto/p2p/simulations/adapters"
 	"github.com/EthereumCommonwealth/go-callisto/swarm/api"
 	"github.com/EthereumCommonwealth/go-callisto/swarm/network/simulation"
@@ -234,14 +234,14 @@ type testSwarmNetworkStep struct {
 type file struct {
 	addr   storage.Address
 	data   string
-	nodeID discover.NodeID
+	nodeID enode.ID
 }
 
 // check represents a reference to a file that is retrieved
 // from a particular node.
 type check struct {
 	key    string
-	nodeID discover.NodeID
+	nodeID enode.ID
 }
 
 // testSwarmNetworkOptions contains optional parameters for running
@@ -440,7 +440,7 @@ func retrieve(
 
 			checkCount++
 			wg.Add(1)
-			go func(f file, id discover.NodeID) {
+			go func(f file, id enode.ID) {
 				defer wg.Done()
 
 				log.Debug("api get: check file", "node", id.String(), "key", f.addr.String(), "total files found", atomic.LoadUint64(totalFoundCount))
@@ -466,7 +466,7 @@ func retrieve(
 			}(f, id)
 		}
 
-		go func(id discover.NodeID) {
+		go func(id enode.ID) {
 			defer totalWg.Done()
 			wg.Wait()
 
