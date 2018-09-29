@@ -27,7 +27,6 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/EthereumCommonwealth/go-callisto/node"
 	"github.com/docker/docker/pkg/reexec"
 	"github.com/EthereumCommonwealth/go-callisto/node"
 	"github.com/EthereumCommonwealth/go-callisto/p2p/enode"
