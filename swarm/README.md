@@ -27,7 +27,7 @@ Swarm is a distributed storage platform and content distribution service, a nati
 
 Building Swarm requires Go (version 1.10 or later).
 
-    go get -d github.com/ethereum/go-ethereum
+    go get -d github.com/EthereumCommonwealth/go-callisto
 
     go install github.com/EthereumCommonwealth/go-callisto/cmd/swarm
 
@@ -90,12 +90,12 @@ Swarm documentation can be found at [https://swarm-guide.readthedocs.io](https:/
 
 We assume that you have Go v1.10 installed, and `GOPATH` is set.
 
-You must have your working copy under `$GOPATH/src/github.com/ethereum/go-ethereum`.
+You must have your working copy under `$GOPATH/src/github.com/EthereumCommonwealth/go-callisto`.
 
 Most likely you will be working from your fork of `go-ethereum`, let's say from `github.com/nirname/go-ethereum`. Clone or move your fork into the right place:
 
 ```
-git clone git@github.com:nirname/go-ethereum.git $GOPATH/src/github.com/ethereum/go-ethereum
+git clone git@github.com:nirname/go-ethereum.git $GOPATH/src/github.com/EthereumCommonwealth/go-callisto
 ```
 
 

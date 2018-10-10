@@ -24,7 +24,7 @@ import (
 	"github.com/EthereumCommonwealth/go-callisto/common"
 	"github.com/EthereumCommonwealth/go-callisto/common/math"
 	"github.com/EthereumCommonwealth/go-callisto/core/types"
-	"github.com/EthereumCommonwealth/go-callisto/crypto"
+	"github.com/EthereumCommonwealth/go-callisto/crypto/sha3"
 	"github.com/EthereumCommonwealth/go-callisto/params"
 )
 
@@ -373,13 +373,20 @@ func opSAR(pc *uint64, interpreter *EVMInterpreter, contract *Contract, memory *
 func opSha3(pc *uint64, interpreter *EVMInterpreter, contract *Contract, memory *Memory, stack *Stack) ([]byte, error) {
 	offset, size := stack.pop(), stack.pop()
 	data := memory.Get(offset.Int64(), size.Int64())
-	hash := crypto.Keccak256(data)
-	evm := interpreter.evm
 
-	if evm.vmConfig.EnablePreimageRecording {
-		evm.StateDB.AddPreimage(common.BytesToHash(hash), data)
+	if interpreter.hasher == nil {
+		interpreter.hasher = sha3.NewKeccak256().(keccakState)
+	} else {
+		interpreter.hasher.Reset()
 	}
-	stack.push(interpreter.intPool.get().SetBytes(hash))
+	interpreter.hasher.Write(data)
+	interpreter.hasher.Read(interpreter.hasherBuf[:])
+
+	evm := interpreter.evm
+	if evm.vmConfig.EnablePreimageRecording {
+		evm.StateDB.AddPreimage(interpreter.hasherBuf, data)
+	}
+	stack.push(interpreter.intPool.get().SetBytes(interpreter.hasherBuf[:]))
 
 	interpreter.intPool.put(offset, size)
 	return nil, nil
@@ -620,7 +627,7 @@ func opSstore(pc *uint64, interpreter *EVMInterpreter, contract *Contract, memor
 
 func opJump(pc *uint64, interpreter *EVMInterpreter, contract *Contract, memory *Memory, stack *Stack) ([]byte, error) {
 	pos := stack.pop()
-	if !contract.jumpdests.has(contract.CodeHash, contract.Code, pos) {
+	if !contract.validJumpdest(pos) {
 		nop := contract.GetOp(pos.Uint64())
 		return nil, fmt.Errorf("invalid jump destination (%v) %v", nop, pos)
 	}
@@ -633,7 +640,7 @@ func opJump(pc *uint64, interpreter *EVMInterpreter, contract *Contract, memory 
 func opJumpi(pc *uint64, interpreter *EVMInterpreter, contract *Contract, memory *Memory, stack *Stack) ([]byte, error) {
 	pos, cond := stack.pop(), stack.pop()
 	if cond.Sign() != 0 {
-		if !contract.jumpdests.has(contract.CodeHash, contract.Code, pos) {
+		if !contract.validJumpdest(pos) {
 			nop := contract.GetOp(pos.Uint64())
 			return nil, fmt.Errorf("invalid jump destination (%v) %v", nop, pos)
 		}
