@@ -41,14 +41,14 @@ var (
 	FrontierBlockReward       = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
 	ByzantiumBlockReward      = big.NewInt(3e+18) // Block reward in wei for successfully mining a block upward from Byzantium
 	ConstantinopleBlockReward = big.NewInt(2e+18) // Block reward in wei for successfully mining a block upward from Constantinople
-	CLOMinerReward            = new(big.Int).Mul(big.NewInt(420), big.NewInt(1e+18)) // Block reward in wei for successfully mining a block upward for Callisto Network
-	CLOTreasuryReward         = new(big.Int).Mul(big.NewInt(120), big.NewInt(1e+18)) // Block reward in wei for successfully mining a block upward for Callisto Network
-	CLOStakeReward            = new(big.Int).Mul(big.NewInt(60), big.NewInt(1e+18))  // Block reward in wei for successfully mining a block upward for Callisto Network
-	CLOHF1TreasuryReward      = new(big.Int).Mul(big.NewInt(60), big.NewInt(1e+18))  // Block reward in wei for successfully mining a block upward for Callisto Network
-	CLOHF1StakeReward         = new(big.Int).Mul(big.NewInt(120), big.NewInt(1e+18)) // Block reward in wei for successfully mining a block upward for Callisto Network
-	CLOTreasuryAddress 		  = common.HexToAddress("0x74682Fc32007aF0b6118F259cBe7bCCC21641600")
-	CLOStakeAddress			  = common.HexToAddress("0x3c06f218Ce6dD8E2c535a8925A2eDF81674984D9")
-	CLOHF1StakeAddress        = common.HexToAddress("0xd813419749b3c2cdc94a2f9cfcf154113264a9d6")
+	CLOMinerReward            = new(big.Int).Mul(big.NewInt(1), big.NewInt(1e+18)) // Block reward in wei for successfully mining a block upward for Callisto Network
+	CLOTreasuryReward         = new(big.Int).Mul(big.NewInt(0.25), big.NewInt(1e+18)) // Block reward in wei for successfully mining a block upward for Callisto Network
+	CLOStakeReward            = new(big.Int).Mul(big.NewInt(0.05), big.NewInt(1e+18))  // Block reward in wei for successfully mining a block upward for Callisto Network
+	CLOHF1TreasuryReward      = new(big.Int).Mul(big.NewInt(0.05), big.NewInt(1e+18))  // Block reward in wei for successfully mining a block upward for Callisto Network
+	CLOHF1StakeReward         = new(big.Int).Mul(big.NewInt(0.25), big.NewInt(1e+18)) // Block reward in wei for successfully mining a block upward for Callisto Network
+	CLOTreasuryAddress 		  = common.HexToAddress("0x93b3ff3f245504dD746851629aE0fcB35afbC91F")
+	CLOStakeAddress			  = common.HexToAddress("0xd5D1c97222651a6bcfFA94a441c097F5FDDDb7a7")
+	CLOHF1StakeAddress        = common.HexToAddress("0x0f036de1Cf325685a36B8f3623e80A7F29EE33Bd")
 	maxUncles                 = 2                 // Maximum number of uncles allowed in a single block
 	allowedFutureBlockTime    = 15 * time.Second  // Max time from current time allowed for blocks, before they're considered future blocks
 
