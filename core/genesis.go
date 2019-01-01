@@ -308,7 +308,7 @@ func DefaultGenesisBlock() *Genesis {
 	return &Genesis{
 		Config:     params.MainnetChainConfig,
 		Nonce:      66,
-		ExtraData:  hexutil.MustDecode("0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa"),
+		ExtraData:  hexutil.MustDecode("0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82f1"),
 		GasLimit:   5000,
 		Difficulty: big.NewInt(17179869184),
 		Alloc:      decodePrealloc(mainnetAllocData),
@@ -324,7 +324,7 @@ func DefaultCallistoGenesisBlock() *Genesis {
 		Difficulty: big.NewInt(524288),
 		Timestamp:  1519622213,
 		Nonce:      0,
-		Coinbase:   common.HexToAddress("0xc3F70b10CE5EC4aA47ce44Eb0B7900A883cd45Dd"),
+		Coinbase:   common.HexToAddress("0x93b3ff3f245504dD746851629aE0fcB35afbC91F"),
 		Mixhash:    common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
 		Alloc:      decodePrealloc(callistoAllocData),
 	}
@@ -409,7 +409,7 @@ func decodePrealloc(data string) GenesisAlloc {
 }
 
 func coldStakingAlloc(ga GenesisAlloc) GenesisAlloc {
-	ga[common.HexToAddress("0xa6199a446edd7a92df19a7c8e46f2fc3da15b3fa")] = GenesisAccount{
+	ga[common.HexToAddress("0x93b3ff3f245504dD746851629aE0fcB35afbC91F")] = GenesisAccount{
 		Balance: big.NewInt(0), Code: []byte(coldStakingCode)}
 	return ga
 }
